@@ -1,0 +1,24 @@
+﻿{
+  "roomsDis": [
+    {
+      "id": "hallway1",
+      "onEntryDescription": "You are now standing at the northern end of a hallway.",
+      "lookAction": "The hallway is long, damp and unpleasant. The only exit I can see is to the south, but the floor is covered in debris that I'd surely slip on if I don't go slow enough.",
+      "upExitBlocked": "I fell down a long way. There's no way I can reach the roof to climb out that way.",
+      "lookSouth":  "I can see an exit to the south. I should be able to make it if I'm careful.", 
+      "southExitOpen": "I {0} over the rocks, being careful not to slip.",
+      "southExitNotFastEnough": "The fans on the side wall are blowing extremely cold air. I'd get hypothermic if I don't move quickly pass them.",
+      "southExitNotSlowEnough": "The debris is way too slippery to simply {0} over. I need to go slower if I want to continue.",
+      "southExitNormalSpeedNotAllowed": "I need to either move quickly to dodge any traps that might activate, or move slowly to avoid activating the traps.",
+      "southExitMustJump": "I'll fall through the gap if I {0}. Maybe I can jump it?",
+      "southExitMustCrawl": "I need to crawl under this overhanging boulder.",
+      "southExitWalkingMethodNotAllowed": "I could either crawl under this overhanging boulder or attempt to jump over it." 
+    },
+    {
+      "id": "darkroom1",
+      "onEntryDescription": "You can't see anything here!",
+      "lookAction": "It really is pitch black in here. You can't even see your hand in front of your face!",
+      "southExitBlocked": "That way is all boarded up."
+    }
+  ]
+}

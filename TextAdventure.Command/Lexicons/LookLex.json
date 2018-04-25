@@ -1,0 +1,19 @@
+﻿{
+    "Actions": [
+        {
+            "name": "look",
+            "method": "normal",
+            "synonyms": [
+                "see",
+                "view"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "inspect",
+            "method": "careful",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

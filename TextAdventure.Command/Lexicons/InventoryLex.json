@@ -1,0 +1,16 @@
+﻿{
+  "Actions": [
+    {
+      "name": "inventory",
+      "method": "inventory",
+      "synonyms": [
+        "inv",
+        "i",
+        "bag",
+        "carrying",
+        "pack"
+      ],
+      "equivalenceClasses": [ ]
+    }
+  ]
+}

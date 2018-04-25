@@ -1,0 +1,6 @@
+﻿{
+    "commandValidationErrors": {
+        "moreThanOneSentence": "Sorry, I can't handle more than one action at a time.",
+        "emptyCommand": "What should I do?" 
+    }
+}

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{464A6712-D0EC-4142-A88A-FDE318807882}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextAdventure.Game</RootNamespace>
+    <AssemblyName>TextAdventure.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stateless, Version=4.0.0.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stateless.4.0.0\lib\net45\Stateless.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reactive.Core, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.3.1.1\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.3.1.1\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.3.1.1\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.1.1\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.3.1.1\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapping\Registration\CommandServices.cs" />
+    <Compile Include="Bootstrapping\Registration\GameDisplayablesServices.cs" />
+    <Compile Include="Bootstrapping\Registration\GameServices.cs" />
+    <Compile Include="Command\CommandHandler.cs" />
+    <Compile Include="Command\Commands\ICommand.cs" />
+    <Compile Include="Command\Commands\LookCommand.cs" />
+    <Compile Include="Command\Commands\MovementCommand.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\DownCardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\UpCardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\WestCardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\ICardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\EastCardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\NorthCardDir.cs" />
+    <Compile Include="Command\Commands\MovementCommandHelpers\SouthCardDir.cs" />
+    <Compile Include="Command\ICommandHandler.cs" />
+    <Compile Include="Command\ResultListener\ResultListener.cs" />
+    <Compile Include="Command\ResultSubscriber\ResultSubscriber.cs" />
+    <Compile Include="Configuration\Models\PlayerConf.cs" />
+    <Compile Include="Displayables\DisplayablesRepo.cs" />
+    <Compile Include="Displayables\Models\GameStatesDisplayables.cs" />
+    <Compile Include="Displayables\Models\IDisplayable.cs" />
+    <Compile Include="Displayables\Models\IDisplayables.cs" />
+    <Compile Include="Displayables\Models\DefaultsDisplayables.cs" />
+    <Compile Include="Displayables\Models\ItemsDisplayables.cs" />
+    <Compile Include="Displayables\Models\RoomsDisplayables.cs" />
+    <Compile Include="Game\GameBootstrap.cs" />
+    <Compile Include="Game\Machines\GameMachine.cs" />
+    <Compile Include="Game\Machines\IMachine.cs" />
+    <Compile Include="Game\Machines\RoomMachine.cs" />
+    <Compile Include="Game\Machines\TransitionHandler.cs" />
+    <Compile Include="Game\States\GameStates.cs" />
+    <Compile Include="Game\States\IState.cs" />
+    <Compile Include="Game\States\IStates.cs" />
+    <Compile Include="Game\States\IStaticStates.cs" />
+    <Compile Include="Game\States\RoomsStates.cs" />
+    <Compile Include="Game\Triggers\GameTriggers.cs" />
+    <Compile Include="Game\Triggers\IStaticTriggers.cs" />
+    <Compile Include="Game\Triggers\ITrigger.cs" />
+    <Compile Include="Game\Triggers\ITriggers.cs" />
+    <Compile Include="Game\Triggers\RoomsTriggers.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachineExt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EmbeddedResource Include="Displayables\EndDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\ErrorDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\GameStatesDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\IntroDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\ItemsDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\PlayerDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\RoomsDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\States\RoomsStates.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\PlayerConf.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displayables\DefaultsDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextAdventure.Command\TextAdventure.Command.csproj">
+      <Project>{d33bb192-b430-4978-96dd-beae8ba4e776}</Project>
+      <Name>TextAdventure.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextAdventure.Infrastructure\TextAdventure.Infrastructure.csproj">
+      <Project>{5660afac-b22f-4a2f-b071-62a67e328800}</Project>
+      <Name>TextAdventure.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

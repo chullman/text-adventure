@@ -1,0 +1,17 @@
+﻿{
+    "movementDefaults": {
+        "unavailableDirection": "There's no way out that way.",
+        "sameLocation": "You're already here.",
+        "locationWithNoRoomIdDefault": "I don't need to move there, I can reach the {0} from here.",
+        "differentDirections": "You're specifying different directions. Which way?",
+        "misunderstoodDirection": "I don't understand where to go.",
+        "unknownLocationDirection": "I recognise {0}, but it's nowhere near me!"
+    },
+    "lookDefaults": {
+        "noLookDir": "There's nothing of interest over there.",
+        "roomInDifferentLoc": "I can't see in that area from over here.",
+        "notInRoom": "I'm not in a room.",
+        "itemNotInRoomNotPlural": "I can't see a {0} around here.",
+        "itemNotInRoomPlural": "I can't see any {0} around here."
+    } 
+}

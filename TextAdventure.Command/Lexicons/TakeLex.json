@@ -1,0 +1,31 @@
+﻿{
+    "Actions": [
+        {
+            "name": "abc def",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "Sydney sider",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "take",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "pick up",
+            "synonyms": [
+                "pickup"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "get",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

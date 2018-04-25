@@ -1,0 +1,9 @@
+﻿{
+  "playerDis": {
+    "lookAction": "It is you, the hero!",
+    "talkAction": "You're not insane!",
+    "inventory": {
+      "description": "You are carrying:"
+    }
+  }
+}

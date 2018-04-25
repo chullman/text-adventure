@@ -1,0 +1,18 @@
+﻿{
+    "Actions": [
+        {
+            "name": "ground",
+            "locId": "ground1",
+            "adjectives": [ ],
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "floor",
+            "locId": "floor1", 
+            "adjectives": [ ],
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

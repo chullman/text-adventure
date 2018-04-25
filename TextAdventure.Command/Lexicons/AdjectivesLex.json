@@ -1,0 +1,19 @@
+﻿{
+    "Actions": [
+        {
+            "name": "bloody",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "old",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "long",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+﻿{
+    "Actions": [
+        {
+            "name": "hallway",
+            "gameRoomIds": [
+                "hallway1"
+            ],
+            "synonyms": [ ], 
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "dark room",
+            "gameRoomIds": [
+                "darkroom1"
+            ],
+            "synonyms": [
+                "darkroom"
+            ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

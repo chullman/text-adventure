@@ -1,0 +1,20 @@
+﻿{
+  "activeDis": {
+    "message": "GAME ACTIVE"
+  },
+  "inactiveDis": {
+    "message": "GAME INACTIVE"
+  },
+  "pausedDis": {
+    "message": "GAME PAUSED"
+  },
+  "runningDis": {
+    "message": "GAME RUNNING"
+  },
+  "exitDis": {
+    "message": "GAME EXITED"
+  },
+  "errorDis": {
+    "message": "GAME ERROR"
+  }
+}

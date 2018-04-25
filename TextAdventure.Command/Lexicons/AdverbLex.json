@@ -1,0 +1,30 @@
+﻿{
+    "Actions": [
+        {
+            "name": "quickly",
+            "speed": "fast",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "slowly",
+            "speed": "slow",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "carefully",
+            "speed": "slow",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "testquick",
+            "speed": "fast",
+            "synonyms": [
+                "quickly test" 
+            ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

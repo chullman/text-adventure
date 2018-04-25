@@ -1,0 +1,38 @@
+﻿{
+    "Actions": [
+        {
+            "name": "fissure",
+            "locId": "fissure1", 
+            "poiPlural": false, 
+            "adjectives": [
+                "long"
+            ],
+            "synonyms": [
+                "crack"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "keycard",
+            "itemId": "keycard1",
+            "poiPlural": false,
+            "adjectives": [
+                "bloody",
+                "old"
+            ],
+            "synonyms": [ ],
+            "equivalenceClasses": [
+                "key card",
+                "key-card"
+            ]
+        },
+        {
+            "name": "pen",
+            "itemId": "pen1", 
+            "poiPlural": false,
+            "adjectives": [ ],
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

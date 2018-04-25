@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D33BB192-B430-4978-96DD-BEAE8BA4E776}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextAdventure.Command</RootNamespace>
+    <AssemblyName>TextAdventure.Command</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ejml-0.23, Version=0.23.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\ejml-0.23.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.2.1\lib\net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="javax.json, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\javax.json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="joda-time, Version=2.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\joda-time.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="jollyday, Version=0.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\jollyday.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="slf4j-api, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\slf4j-api.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="slf4j-simple, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\slf4j-simple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="stanford-corenlp-3.8.0, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\stanford-corenlp-3.8.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xom, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stanford.NLP.CoreNLP.3.8.0.0\lib\xom.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapping\Registration\DeterminationServices.cs" />
+    <Compile Include="Bootstrapping\Registration\ComDisplayablesServices.cs" />
+    <Compile Include="Bootstrapping\Registration\IteratorServices.cs" />
+    <Compile Include="Bootstrapping\Registration\LexiconServices.cs" />
+    <Compile Include="Bootstrapping\Registration\NlpServices.cs" />
+    <Compile Include="CommandBootstrap.cs" />
+    <Compile Include="Determination\Intention\IBaseIntention.cs" />
+    <Compile Include="Determination\Intention\BaseIntentions.cs" />
+    <Compile Include="Determination\Intention\IntentionBuilderFactory.cs" />
+    <Compile Include="Determination\Intention\LookIntention.cs" />
+    <Compile Include="Determination\Intention\MovementIntention.cs" />
+    <Compile Include="Determination\Mappers\IntentToIntentBuilderMapper.cs" />
+    <Compile Include="Determination\Mappers\MapperRepo.cs" />
+    <Compile Include="Determination\Result\Handlers\CommandResultModelHandler.cs" />
+    <Compile Include="Determination\Result\Models\LookResultModel.cs" />
+    <Compile Include="Determination\Result\Models\MovementResultModel.cs" />
+    <Compile Include="Displayables\DisplayablesRepo.cs" />
+    <Compile Include="Displayables\Models\ErrorDisplayables.cs" />
+    <Compile Include="Displayables\Models\IDisplayable.cs" />
+    <Compile Include="Displayables\Models\IDisplayables.cs" />
+    <Compile Include="Iterator\CommandAggregatesRepo.cs" />
+    <Compile Include="Iterator\IDictionaryAggregate.cs" />
+    <Compile Include="Iterator\IDictionaryIterator.cs" />
+    <Compile Include="Iterator\WordsInDictAggregate.cs" />
+    <Compile Include="Iterator\IListAggregate.cs" />
+    <Compile Include="Iterator\IListIterator.cs" />
+    <Compile Include="Iterator\TokensAggregate.cs" />
+    <Compile Include="Iterator\TokensIterator.cs" />
+    <Compile Include="Iterator\WordsInDictIterator.cs" />
+    <Compile Include="Determination\Mappers\LexToIntentionMapper.cs" />
+    <Compile Include="Determination\Mappers\NerStringToIntentionMapper.cs" />
+    <Compile Include="Determination\Mappers\PosStringToIntentionMapper.cs" />
+    <Compile Include="Determination\Result\Models\IResultModel.cs" />
+    <Compile Include="Lexicons\INestedRepo.cs" />
+    <Compile Include="Lexicons\LexActionRepo.cs" />
+    <Compile Include="Lexicons\LexRepo.cs" />
+    <Compile Include="Lexicons\Models\AdjectivesLex.cs" />
+    <Compile Include="Lexicons\Models\AdverbModLex.cs" />
+    <Compile Include="Lexicons\Models\DirectionsLex.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IActionRoot.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IAdjActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IMiscObjectIds.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IPoiIds.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IPoiPluralActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IRoomIdActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IAdvActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\ICommonActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\ILex.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\IMethodActions.cs" />
+    <Compile Include="Lexicons\Models\Infrastructure\ISpeedActions.cs" />
+    <Compile Include="Lexicons\Models\AdverbLex.cs" />
+    <Compile Include="Lexicons\Models\InventoryLex.cs" />
+    <Compile Include="Lexicons\Models\LocationsLex.cs" />
+    <Compile Include="Lexicons\Models\LookLex.cs" />
+    <Compile Include="Lexicons\Models\MiscObjectLex.cs" />
+    <Compile Include="Lexicons\Models\MovementLex.cs" />
+    <Compile Include="Lexicons\Models\PoiLex.cs" />
+    <Compile Include="Lexicons\Models\TakeLex.cs" />
+    <Compile Include="NLP\CoreNlpProcessor.cs" />
+    <Compile Include="NLP\IExternalJavaModel.cs" />
+    <Compile Include="NLP\Models\NlpResult.cs" />
+    <Compile Include="NLP\ModelValidation\BasicValidatorHandler.cs" />
+    <Compile Include="NLP\ModelValidation\CustomRules\ListMustContainOnlyOneItem.cs" />
+    <Compile Include="NLP\ModelValidation\CustomRules\ListMustNotBeEmpty.cs" />
+    <Compile Include="NLP\ModelValidation\CustomRules\CheckAllWordsIsInGameLex.cs" />
+    <Compile Include="NLP\ModelValidation\CustomRules\CheckAllWordsIsInNlpLex.cs" />
+    <Compile Include="NLP\ModelValidation\Validators\BasicValidators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lexicons\DirectionsLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\InventoryLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\MovementLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\PoiLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\TakeLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\AdverbLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\LocationsLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\AdjectivesLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\LookLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\AdverbModLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexicons\MiscObjectLex.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextAdventure.Infrastructure\TextAdventure.Infrastructure.csproj">
+      <Project>{5660afac-b22f-4a2f-b071-62a67e328800}</Project>
+      <Name>TextAdventure.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displayables\ErrorDisplayables.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

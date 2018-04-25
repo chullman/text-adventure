@@ -1,0 +1,81 @@
+﻿{
+    "rooms": [
+        {
+            "id": "hallway1",
+            "isInside": true,
+            "isTooCold": true,
+            "south": "darkroom1",
+            "southExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "items": [
+                {
+                    "itemId": "keycard1",
+                    "miscObjId": "ground1"
+                },
+                {
+                    "itemId": "stick1",
+                    "miscObjId": "ground1"
+                }
+            ]
+        },
+        {
+            "id": "darkroom1",
+            "isInside": true,
+            "north": "hallway1",
+            "northExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "east": "hallway1",
+            "eastExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "west": "hallway1",
+            "westExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "down": "hallway1",
+            "downExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "up": "hallway1",
+            "upExitModifiers": {
+                "exitAllowed": true,
+                "fastExitRequired": false,
+                "slowExitRequired": false,
+                "jumpExitRequired": false,
+                "crawlExitRequired": false
+            },
+            "items": [
+                {
+                    "itemId": "pen1",
+                    "miscObjId": "ground1"
+                }
+            ]
+        },
+        {
+            "id": "ERROR"
+        }
+
+    ]
+}

@@ -1,0 +1,47 @@
+﻿{
+    "Actions": [
+        {
+            "name": "north",
+            "synonyms": [
+                "n",
+                "nor"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "south",
+            "synonyms": [
+                "s"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "east",
+            "synonyms": [
+                "e"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "west",
+            "synonyms": [
+                "w"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "up",
+            "synonyms": [
+                "above"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "down",
+            "synonyms": [
+                "under"
+            ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}

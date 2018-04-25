@@ -1,0 +1,24 @@
+﻿{
+  "itemsDis": [
+        {
+          "id": "rock1",
+          "lookAction": "It is a big, heavy rock",
+          "getAction": "I can't pick that up",
+          "pushAction": "It's too heavy",
+          "pullAction": "It's too heavy"
+        },
+        {
+          "id": "stick1",
+          "lookAction": "It's just a stick",
+          "getAction": "Taken"
+        },
+        {
+          "id": "pen1",
+          "lookAction": "It is a blue ball-point pen. It still has lots of ink left."
+        },
+        {
+          "id": "keycard1",
+          "lookAction": "You can't make out any features on the old keycard. It has dried blood stains on it"
+        }
+    ]
+}

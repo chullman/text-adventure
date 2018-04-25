@@ -1,0 +1,71 @@
+﻿{
+    "Actions": [
+        {
+            "name": "move",
+            "speed": "normal",
+            "method": "walk",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "hop skip",
+            "speed": "normal",
+            "method": "walk",
+            "synonyms": [
+                "hopskip"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "go",
+            "speed": "normal",
+            "method": "walk",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "walk",
+            "speed": "normal",
+            "method": "walk",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "run",
+            "speed": "fast",
+            "method": "walk",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "jump",
+            "speed": "normal",
+            "method": "jump",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "hop",
+            "speed": "normal",
+            "method": "jump",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "crawl",
+            "speed": "slow",
+            "method": "crawl",
+            "synonyms": [
+                "slide"
+            ],
+            "equivalenceClasses": [ ]
+        },
+        {
+            "name": "sneak",
+            "speed": "slow",
+            "method": "walk",
+            "synonyms": [ ],
+            "equivalenceClasses": [ ]
+        }
+    ]
+}
