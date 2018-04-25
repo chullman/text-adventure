@@ -10,7 +10,7 @@ Inspired by the original Zork games. A console-based text adventure game with a 
 - Code base purposely over-engineered to best demonstrated my skills and knowledge in .NET and C# code design
 - Adhered to SOLID design pricinples
 - All movement and look intentions are recognised by the fully featured parser and actioned upon
-- All other possible intentions that the player may want to do are
+- All other possible intentions that the player may want to do are recognised by the NLP system, but the game does not act upon them (to come in a later update)
 - Adverbs and adjectives are all fully recognised and utilised - e.g. "very quickly move ..." results in a different action to "slowly move ..."
 - Full Named Entity Recognition (NER) support, so points of interests like real world locations are recognised by the NLP system
 
