@@ -22,6 +22,14 @@ The player can freely move around the environment using intuitive English phrase
 ### Look
 Similarly, the player can look around their environment or at points of interests or items. E.g. "look at room", "inspect the rock"
 
+## Setup
+
+1) Download Stanford CoreNLP https://stanfordnlp.github.io/CoreNLP/download.html and extract somewhere
+2) Open TextAdventure.Command/CommandBootstrap.cs
+    and change line 70 to point to the /models subdirectory
+    and change line 74 to point to /models/edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz
+3) Rebuild all
+
 ## Author
 
 @chullman https://github.com/chullman/
