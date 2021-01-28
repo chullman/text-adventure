@@ -24,11 +24,12 @@ Similarly, the player can look around their environment or at points of interest
 
 ## Setup
 
-1) Download Stanford CoreNLP https://stanfordnlp.github.io/CoreNLP/download.html and extract somewhere
-2) Open TextAdventure.Command/CommandBootstrap.cs
+1) Clone, or download and extract this repository
+2) Download both Stanford CoreNLP https://stanfordnlp.github.io/CoreNLP/download.html, as well as the English "model jar" file, and extract them both somewhere locally (use a file archiver like 7-Zip to extract the JAR file)
+3) Open TextAdventure.Command/CommandBootstrap.cs
     and change line 70 to point to the /models subdirectory
-    and change line 74 to point to /models/edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz
-3) Rebuild all
+    and change line 74 to point to /englishPCFG.ser.gz (found in /edu/stanford/nlp/models/lexparser subdirectory)
+4) Rebuild all and run
 
 ## Author
 
